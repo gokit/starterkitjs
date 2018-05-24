@@ -6,8 +6,8 @@
     "module": "dest/node/index.js",
     "scripts": {
         "test": "mocha ./tests/index.js",
-        "coverage-istanbul": "./node_modules/.bin/istanbul cover _mocha tests/index.js",
-        "coverage-babel": "babel-node ./node_modules/istanbul/lib/cli cover _mocha tests/index.js",
+        "coverage-istanbul": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec tests/index.js",
+        "coverage-babel": "babel-node ./node_modules/istanbul/lib/cli cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec tests/index.js",
         "webpack:node": "PACK=node npx webpack --config webpack.config.js",
         "webpack:web": "PACK=web npx webpack --config webpack.config.js",
         "webpack:node:watch": "PACK=node npx webpack --config webpack.config.js --watch",

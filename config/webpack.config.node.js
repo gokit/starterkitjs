@@ -5,7 +5,7 @@ const pre = require("./webpack.preconfig");
 
 // path ways for files.
 const rootdir = path.resolve(__dirname);
-// const srcdir = path.join(rootdir, "src");
+const srcdir = path.join(rootdir, "../src");
 const destdir = path.join(rootdir, "../dest/node");
 const nodemodules = path.join(rootdir, "../node_modules");
 
@@ -32,7 +32,19 @@ module.exports = pre.Build({
         library: "starterkitjs",
         libraryTarget: "umd", // can also be 'window', 'this', 'var' see https://webpack.js.org/guides/author-libraries/.
     },
-    module: {},
+    module: {
+        rules: [{
+            test: /\.js?$/,
+            include: srcdir,
+            exclude: /node_modules/,
+            use: [{
+                loader: "babel-loader",
+                options: {
+                    presets: ["env", "stage-2"],
+                },
+            }],
+        }],
+    },
     plugins: [
         new webpack.BannerPlugin({
             banner: "require(\"source-map-support\").install();",

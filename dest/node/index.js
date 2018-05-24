@@ -86,16 +86,24 @@ return /******/ (function(modules) { // webpackBootstrap
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-const lodash = __webpack_require__(/*! lodash */ "lodash");
 
-const Name = lodash.toUpper("app.js");
 
-/* harmony default export */ __webpack_exports__["default"] = (Name);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _lodash = __webpack_require__(/*! lodash */ "lodash");
+
+var lodash = _interopRequireWildcard(_lodash);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+var Name = lodash.toUpper("app.js"); // const lodash = require("lodash");
+exports.default = Name;
 
 /***/ }),
 

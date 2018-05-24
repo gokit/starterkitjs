@@ -17257,10 +17257,14 @@ module.exports = function(module) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var lodash = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
-var Name = lodash.toUpper("app.js");
+var _lodash = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
+var lodash = _interopRequireWildcard(_lodash);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+var Name = lodash.toUpper("app.js"); // const lodash = require("lodash");
 exports.default = Name;
 
 /***/ })

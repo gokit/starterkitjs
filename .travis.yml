@@ -12,8 +12,9 @@ addons:
             - libgif-dev
             - build-essential
             - g++
-            
-after_script: NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+
+before_script: npm install -g istanbul
+after_script: NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec tests/index.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
 
 after_success:
   - npm run coverage-istanbul
