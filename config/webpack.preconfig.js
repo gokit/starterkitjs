@@ -1,4 +1,4 @@
-const webpack = require("webpack");
+// const webpack = require("webpack");
 const path = require("path");
 const lodash = require("lodash");
 
@@ -14,16 +14,10 @@ function maker(moreConfig) {
     return lodash.merge({
         output: {},
         module: {},
+        plugins: [],
         mode: process.env.mode.trim(),
         devtool: "sourcemap",
         entry: path.join(srcdir, "app.js"),
-        plugins: [
-            new webpack.BannerPlugin({
-                banner: "require(\"source-map-support\").install();",
-                raw: true,
-                entryOnly: false,
-            }),
-        ],
     }, moreConfig);
 }
 
