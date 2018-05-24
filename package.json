@@ -1,0 +1,24 @@
+{
+  "name": "transkitjs",
+  "version": "0.0.1",
+  "description": "A library for cross-browser transports (xhr, nodehttp, fetch, mozXhr).",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gokit/transkitjs.git"
+  },
+  "keywords": [
+    "transportjs",
+    "transkitjs",
+    "transkit"
+  ],
+  "author": "Ewetumo Alexander",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gokit/transkitjs/issues"
+  },
+  "homepage": "https://github.com/gokit/transkitjs#readme"
+}
